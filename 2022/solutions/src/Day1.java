@@ -8,14 +8,15 @@ import java.util.stream.Stream;
 public class Day1 {
     public static void main(String[] args) {
 
-        System.out.println("Hello world!");
+        List<Integer> input = readInput();
+        System.out.println(input);
     }
 
 
 
     private static List<Integer> readInput() {
         List<Integer> result;
-        String fileName = "input.txt";
+        String fileName = "day1input.txt";
         try (Stream<String> lines = Files.lines(Paths.get(fileName))) {
             result = lines
                     .map(s -> Integer.parseInt(s))
